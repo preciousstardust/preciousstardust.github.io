@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection">
+	<link rel="stylesheet" href="css/main.css">
+
+	<title>Cat Energy</title>
+</head>
+<body>
+	<div class="container">
+		<header class="page-header" id="page-header">
+			<div class="page-header__wrapper">
+				<a class="page-header__link logo">
+					<img class="logo__img" src="img/logo-mobile.svg" width="33" height="38" alt="logo">
+				</a>
+				<a>
+					<img class="logo__text" src="img/logo-mobile-header.svg" width="135" height="18" alt="logo-text">
+				</a>
+				<button class="page-header__button menu-button" type="button">
+					<span class="menu-button__bar"></span>
+					<span class="visually-hidden">Закрыть</span>
+				</button>
+			</div>
+			<nav class="main-nav main-nav--no-js">
+				<ul class="main-nav__list">
+					<li class="main-nav__list-item"><a class="main-nav__link">Главная</a></li>
+					<li class="main-nav__list-item"><a class="main-nav__link" href="">Каталог продукции</a></li>
+					<li class="main-nav__list-item"><a class="main-nav__link" href="">Подбор программы</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="page-main">
+			<h1 class="visually-hidden">Cat Energy Магазин для котов</h1>
+			<section class="promo">
+				<img class="promo__bg" src="img/index-background-mobile.jpg" width="320" height="305" alt="cat-bg">
+				<h2 class="promo__heading">Функциональное питание для котов</h2>
+				<p class="promo__slogan">Занялся собой? Займись котом!</p>
+				<img class="promo__img" src="img/index-can-mobile.png" width="280" height="271" alt="cat-energy-корм">
+				<a class="button promo__button" href="">Подобрать программу</a>
+			</section>
+			<section class="categories">
+				<h2 class="visually-hidden">Категории</h2>
+				<ul class="categories__list">
+					<li class="categories__list-item">
+						<h3 class="categories__item-heading categories__item-heading--weight-loss">Похудение</h3>
+						<p class="categories__item-description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+						<a href="" class="categories__item-link">Каталог Slim</a>
+					</li>
+					<li class="categories__list-item categories__list-item--last">
+						<h3 class="categories__item-heading categories__item-heading--weight-gain">Набор массы</h3>
+						<p class="categories__item-description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+						<a href="" class="categories__item-link">Каталог pro</a>
+					</li>
+				</ul>
+			</section>
+			<section class="advantages">
+				<h2 class="advantages__heading">Как это работает</h2>
+				<ul class="advantages__list">
+					<li class="advantages__list-item">
+						<p class="advantages__item-description">Функциональное питание содержит только полезные питательные вещества.</p>
+					</li>
+					<li class="advantages__list-item">
+						<p class="advantages__item-description advantages__item-description--powder-icon">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+					</li>
+					<li class="advantages__list-item">
+						<p class="advantages__item-description advantages__item-description--knife-icon">Замените один-два приема обычной еды на наше функциональное питание.</p>
+					</li>
+					<li class="advantages__list-item advantages__list-item--last">
+						<p class="advantages__item-description advantages__item-description--watch-icon">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+					</li>
+				</ul>
+			</section>
+			<section class="before-after">
+				<div class="before-after__content">
+					<h2 class="before-after__heading">Живой пример</h2>
+					<p class="before-after__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и&nbsp;по&nbsp;-&nbsp;прежнему спит по 16 часов в день.</p>
+					<div class="before-after__wrapper">
+						<div class="before-after__stats before-after__stats--weight">5 кг</div>
+						<div class="before-after__stats before-after__stats--time">60 дней</div>
+						<p class="before-after__price"><span>Затраты на питание:</span><span class="before-after__price--right">15 000 руб.</span></p>
+					</div>
+				</div>
+				<div class="before-after__slider-container">
+					<div id="image-comparison" class="image__comparison">
+						<div class="image__comparison-images">
+							<img class="image__img image__img--after" src="img/after-desktop.jpg" alt="">
+							<div id="image-divider" class="image__divider">
+								<img class="image__img image__img--before" src="img/before-desktop.jpg" alt="">
+							</div>
+						</div>
+						<input type="range" min="0" max="100" value="50" id="image-slider" name="image-slider" class="image__slider" oninput="moveDivisor()" autocomplete="off">
+						<label id="labelBefore" class="image__label " for="left-dot">было</label>
+						<label id="labelAfter" class="image__label image__label--right" for="right-dot">стало</label>
+						<ul class="image__nav-list">
+							<li class="image__nav-item" id="indicator"></li>
+							<!-- <li class="image__nav-item" id="right-dot"></li> -->
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="page-footer">
+			<div class="page-footer__contacts contacts">
+				<h2 class="visually-hidden">Контакты</h2>
+				<div class="contacts__card">
+					<h3 class="contacts__head">приглашаем к сотрудничеству дилеров!</h3>
+					<p class="contacts__adress">ул. Большая<br>Конюшенная, д. 19/8 Санкт-Петербург</p>
+				</div>
+				<iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13446.465908690085!2d30.317609783583723!3d59.934977677439875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310b32cbe2e9%3A0x74e032aa0505dfc!2z0JPQvtGB0YPQtNCw0YDRgdGC0LLQtdC90L3Ri9C5INCt0YDQvNC40YLQsNC2!5e0!3m2!1sru!2sru!4v1531850429167" width="320" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+			<div class="page-footer__wrapper">
+				<div class="page-footer__logo">
+					<a class="page-footer__logo-link" href="#page-header"><img class="page-footer__logo-img" src="img/logo-mobile-header.svg"></a>
+				</div>
+				<ul class="page-footer__social-list">
+					<li class="page-footer__social-item">
+						<a href="" class="page-footer__social-link page-footer__social-link--vkontakte"><span class="visually-hidden">vkontakte</span></a>
+					</li>
+					<li class="page-footer__social-item">
+						<a href="" class="page-footer__social-link 	page-footer__social-link--instagramm"><span class="visually-hidden">instagramm</span></a>
+					</li>
+					<li class="page-footer__social-item">
+						<a href="" class="page-footer__social-link page-footer__social-link--facebook"><span class="visually-hidden">facebook</span></a>
+					</li>
+				</ul>
+				<div class="page-footer__prooduction">
+					<a class="page-footer__prooduction-link" href="">28 Memories</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script>
+		var labelBefore = document.querySelector('#labelBefore');
+		var labelAfter = document.querySelector('#labelAfter');
+		var indicator = document.querySelector('#indicator');
+		var imgBefore = document.querySelector('.image__img--before');
+		var imgAfter = document.querySelector('.image__img--after');
+
+		labelBefore.addEventListener("click", function () {
+			indicator.classList.remove('image__nav-item__right');
+			imgBefore.classList.remove('image__img--hide');
+		});
+
+		labelAfter.addEventListener("click", function () {
+			indicator.classList.add('image__nav-item__right');
+			imgBefore.classList.add('image__img--hide');
+		});
+
+	</script>
+	<script src="js/menuToggle.js"></script>
+	<script src="js/before-after.min.js"></script>
+</body>
+</html>
