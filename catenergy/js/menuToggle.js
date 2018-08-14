@@ -8,12 +8,14 @@ if (menuToggle.classList.contains('main-nav--no-js')){
 
 toggleButton.addEventListener("click", function (evt) {
     evt.preventDefault;
-    menuIcon.classList.toggle("menu-button__bar--active");
-    if (menuIcon.classList.contains("menu-button__bar--active")){
+
+    toggleButton.classList.toggle("menu-button--active");
+    if (toggleButton.classList.contains("menu-button--active")){
         menuToggle.classList.remove("main-nav--closed");
         menuToggle.classList.add("main-nav--opened");
     } else {
         menuToggle.classList.remove("main-nav--opened");
         menuToggle.classList.add("main-nav--closed");
     }
+
 });
