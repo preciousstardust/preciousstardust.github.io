@@ -35,11 +35,12 @@
 			</nav>
 			<div class="page-header__contacts">
 				<a href="tel:+79052805948" class="page-header__contacts-link page-header__contacts--tel">8-905-280-59-48</a>
-				<a href="" mailto:vase1970@mail.ru""="" class="page-header__contacts-link page-header__contacts--email">vase1970@mail.com</a>
+				<a href="" mailto:vase1970@mail.ru""="" class="page-header__contacts-link page-header__contacts--email">valera@mail.com</a>
 			</div>
 		</header>
 		<main class="page-main">
 			<h1 class="visually-hidden">Скупка продажа антиквариата</h1>
+			<button onclick="topFunction()" id="toTopButton" class="to-top-button" title="Наверх">Наверх</button>
 			<section class="promo" id="promo">
 				<!-- <picture>
 					<source media="(min-width: 1440px)" srcset="img/index-background-desktop.jpg 1x, img/index-background-desktop@2x.jpg 2x">
@@ -219,21 +220,38 @@
 		$(document).ready(function(){
 
   		$('#owner-tel').inputmask("8 (999) 999-99-99");
-		  $('#owner-email').inputmask({
-			mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
-			greedy: false,
-			onBeforePaste: function (pastedValue, opts) {
-			pastedValue = pastedValue.toLowerCase();
-			return pastedValue.replace("mailto:", "");
-			},
-			definitions: {
-			'*': {
-				validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
-				casing: "lower"
-      			}
-    		}
-  		});
+		$('#owner-email').inputmask({
+		mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+		greedy: false,
+		onBeforePaste: function (pastedValue, opts) {
+		pastedValue = pastedValue.toLowerCase();
+		return pastedValue.replace("mailto:", "");
+		},
+		definitions: {
+		'*': {
+			validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+			casing: "lower"
+			}
+		}
 	});
+	});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 500) {
+					$('#toTopButton').fadeIn();
+				} else {
+					$('#toTopButton').fadeOut();
+				}
+			});
+			$('#toTopButton').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 400);
+				return false;
+			});
+		});
 	</script>
 </body>
 </html>
