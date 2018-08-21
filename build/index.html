@@ -26,7 +26,7 @@
 					<span class="visually-hidden">Закрыть</span>
 				</button>
 			</div>
-			<nav class="main-nav main-nav--no-js">
+			<nav class="main-nav main-nav--no-js" id="menu">
 				<ul class="main-nav__list">
 					<li class="main-nav__list-item"><a class="main-nav__link" href="#categories">Мы покупаем</a></li>
 					<li class="main-nav__list-item"><a class="main-nav__link" href="#form">Свяжитесь с нами</a></li>
@@ -40,7 +40,7 @@
 		</header>
 		<main class="page-main">
 			<h1 class="visually-hidden">Скупка продажа антиквариата</h1>
-			<section class="promo">
+			<section class="promo" id="promo">
 				<!-- <picture>
 					<source media="(min-width: 1440px)" srcset="img/index-background-desktop.jpg 1x, img/index-background-desktop@2x.jpg 2x">
 					<img class="promo__bg" src="img/index-background-mobile.jpg" srcset="img/index-background-mobile@2x.jpg 2x" alt="cat-bg">
@@ -57,7 +57,7 @@
 					<source media="(min-width: 768px)" srcset="img/index-can-tablet.jpg 1x, img/index-can-tablet@2x.jpg 2x">
 					<img class="promo__img" src="img/typewriter.jpg" srcset="img/index-can-mobile@2x.png 2x" alt="cat-energy корм">
 				</picture> -->
-				<a class="promo__button button" href="#form">Свяжитесь с нами!</a>
+				<a class="promo__button button" id="promoButton" href="#form">Свяжитесь с нами!</a>
 			</section>
 			<section class="categories" id="categories">
 				<h2 class="categories__heading">Мы покупаем</h2>
@@ -177,10 +177,63 @@
 			</div>
 		</footer>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<!-- RedHelper -->
 	<script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async" src="https://web.redhelper.ru/service/main.js?c=sugarlightspb"></script>
 	<!-- /RedHelper -->
 	<script src="js/picturefill.min.js"></script>
 	<script src="js/menuToggle.js"></script>
+	<script src="js/jquery.inputmask.bundle.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#menu").on("click","a", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+			event.preventDefault();
+
+		//забираем идентификатор бока с атрибута href
+			var id  = $(this).attr('href'),
+
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+
+		//анимируем переход на расстояние - top за 1500 мс
+				$('body,html').animate({scrollTop: top}, 1500);
+			});
+
+			$("#promo").on("click","a", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+			event.preventDefault();
+
+		//забираем идентификатор бока с атрибута href
+			var id  = $(this).attr('href'),
+
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+
+		//анимируем переход на расстояние - top за 1500 мс
+				$('body,html').animate({scrollTop: top}, 1500);
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+
+  		$('#owner-tel').inputmask("8 (999) 999-99-99");
+		  $('#owner-email').inputmask({
+			mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+			greedy: false,
+			onBeforePaste: function (pastedValue, opts) {
+			pastedValue = pastedValue.toLowerCase();
+			return pastedValue.replace("mailto:", "");
+			},
+			definitions: {
+			'*': {
+				validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+				casing: "lower"
+      			}
+    		}
+  		});
+	});
+	</script>
 </body>
 </html>
