@@ -8,23 +8,6 @@
 	<link rel="preloader" href="css/main.min.css" as="style">
 	<link rel="preloader" href="fonts/Oswald-Regular.woff2" as="font">
 	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
 	<title>Антиквариат ХХ век. Скупка. Продажа.</title>
 </head>
 <body class="index-page">
@@ -37,9 +20,7 @@
 						<img class="logo__img" src="img/Marx_Engels_Lenin.svg" width="33" height="38" alt="logo">
 					</picture>
 				</a>
-				<a>
-					<p class="logo__text">Антиквариат ХХ век</p>
-				</a>
+				<a class="logo__text">Антиквариат ХХ век</a>
 				<button class="page-header__button menu-button" type="button">
 					<span class="menu-button__bar"></span>
 					<span class="visually-hidden">Закрыть</span>
@@ -47,9 +28,9 @@
 			</div>
 			<nav class="main-nav main-nav--no-js">
 				<ul class="main-nav__list">
-					<li class="main-nav__list-item"><a class="main-nav__link">Главная</a></li>
-					<li class="main-nav__list-item"><a class="main-nav__link" href="catalog.html">Мы покупаем</a></li>
-					<li class="main-nav__list-item"><a class="main-nav__link" href="form.html">Наши адреса</a></li>
+					<li class="main-nav__list-item"><a class="main-nav__link" href="#categories">Мы покупаем</a></li>
+					<li class="main-nav__list-item"><a class="main-nav__link" href="#form">Свяжитесь с нами</a></li>
+					<li class="main-nav__list-item"><a class="main-nav__link" href="#contacts">Наши адреса</a></li>
 				</ul>
 			</nav>
 			<div class="page-header__contacts">
@@ -64,39 +45,44 @@
 					<source media="(min-width: 1440px)" srcset="img/index-background-desktop.jpg 1x, img/index-background-desktop@2x.jpg 2x">
 					<img class="promo__bg" src="img/index-background-mobile.jpg" srcset="img/index-background-mobile@2x.jpg 2x" alt="cat-bg">
 				</picture> -->
-				<h2 class="promo__heading">Скупка и продажа антиквариата в Санкт-Петербурге</h2>
+				<h2 class="promo__heading">Скупка и продажа антиквариата в&nbspСанкт-Петербурге</h2>
 				<p class="promo__slogan">Собираетесь выкинуть хлам с&nbspантресолей? Не спешите!<br>Возможно его можно выгодно продать!</p>
+				<ul class="promo__list">
+					<li class="promo__list-item">Деньги сразу на руки</li>
+					<li class="promo__list-item">Выгодные цены</li>
+					<li class="promo__list-item">Находимся рядом</li>
+				</ul>
 				<!-- <picture>
 					<source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
 					<source media="(min-width: 768px)" srcset="img/index-can-tablet.jpg 1x, img/index-can-tablet@2x.jpg 2x">
 					<img class="promo__img" src="img/typewriter.jpg" srcset="img/index-can-mobile@2x.png 2x" alt="cat-energy корм">
 				</picture> -->
-				<a class="promo__button button" href="form.html">Связаться с нами</a>
+				<a class="promo__button button" href="#form">Свяжитесь с нами!</a>
 			</section>
-			<section class="categories">
+			<section class="categories" id="categories">
 				<h2 class="categories__heading">Мы покупаем</h2>
 				<ul class="categories__list">
 					<li class="categories__list-item categories__list-item--pin">
 						<h3 class="categories__item-heading">Значки</h3>
-						<p class="categories__item-description">Предок современного значка- римская железная медаль, круглой формы с изображениями львов и мифических животных.</p>
-						<a href="catalog.html" class="categories__item-link">Полный список</a>
+						<!-- <p class="categories__item-description">Предок современного значка- римская железная медаль, круглой формы с изображениями львов и мифических животных.</p>
+						<a href="catalog.html" class="categories__item-link">Полный список</a> -->
 					</li>
 					<li class="categories__list-item categories__list-item--porcelain">
 						<h3 class="categories__item-heading">Посуда</h3>
-						<p class="categories__item-description">Самое дорогая фарфоровая посуда - это маленькая фарфоровая пиала Chicken Cup. Она была продана в Гонконге 8 апреля 2014 года на аукционе Sotheby's за 36 млн. долларов.</p>
-						<a href="catalog.html" class="categories__item-link">Полный список</a>
+						<!-- <p class="categories__item-description">Самое дорогая фарфоровая посуда - это маленькая фарфоровая пиала Chicken Cup. Она была продана в Гонконге 8 апреля 2014 года на аукционе Sotheby's за 36 млн. долларов.</p>
+						<a href="catalog.html" class="categories__item-link">Полный список</a> -->
 					</li>
 					<li class="categories__list-item
 					categories__list-item--books">
 						<h3 class="categories__item-heading">Книги</h3>
-						<p class="categories__item-description">Самой дорогой книгой в настоящее время считают уникальный «Апокалипсис», изданный французом Жозефом Форе. Книга оценена в 100 миллионов старых франков. Она выставлена в музее современного искусства в Париже</p>
-						<a href="catalog.html" class="categories__item-link">Полный список</a>
+						<!-- <p class="categories__item-description">Самой дорогой книгой в настоящее время считают уникальный «Апокалипсис», изданный французом Жозефом Форе. Книга оценена в 100 миллионов старых франков. Она выставлена в музее современного искусства в Париже</p>
+						<a href="catalog.html" class="categories__item-link">Полный список</a> -->
 					</li>
 					<li class="categories__list-item
 					categories__list-item--photo categories__list-item--last">
 						<h3 class="categories__item-heading">Фотоаппараты</h3>
-						<p class="categories__item-description">Самая первая фотография сделана была в 1826 году. Называется она «Вид их окна на Ле-Грас». Ее создателем является Жозеф Нисефор Ньепс, французский изобретатель.</p>
-						<a href="catalog.html" class="categories__item-link">Полный список</a>
+						<!-- <p class="categories__item-description">Самая первая фотография сделана была в 1826 году. Называется она «Вид их окна на Ле-Грас». Ее создателем является Жозеф Нисефор Ньепс, французский изобретатель.</p>
+						<a href="catalog.html" class="categories__item-link">Полный список</a> -->
 					</li>
 				</ul>
 			</section>
@@ -117,9 +103,40 @@
 					</li>
 				</ul>
 			</section>
+			<form id="form" action="" method="POST">
+				<section class="owner">
+                    <div class="owner__wrapper-heading">
+                        <h2 class="owner__heading">Ваши контактные данные</h2>
+                    </div>
+                    <ul class="owner__data-list">
+                        <li class="owner__data-item">
+                            <label class="owner__data-label" for="owner-email">E-mail:*</label>
+                            <input id="owner-email" class="owner__email" type="email" placeholder="Brunkoff@gmail.com" name="ownerEmail">
+                            <i class="owner__email-icon">
+                                <svg class="owner__email-svg" xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 512 512">
+                                    <use xlink:href="#icon-email"></use>
+                                </svg>
+                            </i>
+                        </li>
+                        <li class="owner__data-item">
+                            <label class="owner__data-label" for="owner-tel">Телефон:*</label>
+                            <input id="owner-tel" class="owner__tel" type="tel" placeholder="8 (960) 900-60-90" name="ownerTel">
+                            <i class="owner__tel-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
+                                    <use xlink:href="#icon-phone"></use>
+                                </svg>
+                            </i>
+                        </li>
+                    </ul>
+                </section>
+				<div class="more-info__wrapper-button">
+					<button class="more-info__submit button" type="submit">Отправить заявку</button>
+					<div class="more-info__required-fields">* — Обязательные поля</div>
+				</div>
+			</form>
 		</main>
 		<footer class="page-footer">
-			<div class="page-footer__contacts contacts">
+			<div class="page-footer__contacts contacts" id="contacts">
 				<h2 class="visually-hidden">Контакты</h2>
 				<div class="contacts__card">
 					<h3 class="contacts__head">Заходите к нам в гости!</h3>
@@ -160,6 +177,9 @@
 			</div>
 		</footer>
 	</div>
+	<!-- RedHelper -->
+	<script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async" src="https://web.redhelper.ru/service/main.js?c=sugarlightspb"></script>
+	<!-- /RedHelper -->
 	<script src="js/picturefill.min.js"></script>
 	<script src="js/menuToggle.js"></script>
 </body>
