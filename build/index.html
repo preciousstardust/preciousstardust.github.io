@@ -14,13 +14,14 @@
 	<div class="container">
 		<header class="page-header" id="page-header">
 			<div class="page-header__wrapper">
-				<a class="page-header__link logo">
+				<!-- <a class="page-header__link logo">
 					<picture>
-						<source media="(min-width: 768px)" srcset="img/Marx_Engels_Lenin.svg">
-						<img class="logo__img" src="img/Marx_Engels_Lenin.svg" width="33" height="38" alt="logo">
+						<source media="(min-width: 768px)" srcset="img/logo_antik.svg">
+						<img class="logo__img" src="img/logo_antik.svg" width="33" height="38" alt="logo">
 					</picture>
-				</a>
-				<a class="logo__text">Антиквариат ХХ век</a>
+				</a> -->
+				<img class="logo__img" src="img/vectorpaint.svg" width="33" height="38" alt="logo">
+				<!-- <a class="logo__text">Антиквариат ХХ век</a> -->
 				<button class="page-header__button menu-button" type="button">
 					<span class="menu-button__bar"></span>
 					<span class="visually-hidden">Закрыть</span>
@@ -30,7 +31,7 @@
 				<ul class="main-nav__list">
 					<li class="main-nav__list-item"><a class="main-nav__link" href="#categories">Мы покупаем</a></li>
 					<li class="main-nav__list-item"><a class="main-nav__link" href="#form">Свяжитесь с нами</a></li>
-					<li class="main-nav__list-item"><a class="main-nav__link" href="#contacts">Наши адреса</a></li>
+					<li class="main-nav__list-item"><a class="main-nav__link" href="#contacts">Наш адрес</a></li>
 				</ul>
 			</nav>
 			<div class="page-header__contacts">
@@ -40,7 +41,12 @@
 		</header>
 		<main class="page-main">
 			<h1 class="visually-hidden">Скупка продажа антиквариата</h1>
-			<button onclick="topFunction()" id="toTopButton" class="to-top-button" title="Наверх">Наверх</button>
+			<button id="toTopButton" class="to-top-button" title="Наверх">
+				<div class="arrow">
+					<div class="arrow-top"></div>
+					<div class="arrow-bottom"></div>
+				  </div>
+			</button>
 			<section class="promo" id="promo">
 				<!-- <picture>
 					<source media="(min-width: 1440px)" srcset="img/index-background-desktop.jpg 1x, img/index-background-desktop@2x.jpg 2x">
@@ -80,8 +86,34 @@
 						<a href="catalog.html" class="categories__item-link">Полный список</a> -->
 					</li>
 					<li class="categories__list-item
-					categories__list-item--photo categories__list-item--last">
+					categories__list-item--photo ">
 						<h3 class="categories__item-heading">Фотоаппараты</h3>
+						<!-- <p class="categories__item-description">Самая первая фотография сделана была в 1826 году. Называется она «Вид их окна на Ле-Грас». Ее создателем является Жозеф Нисефор Ньепс, французский изобретатель.</p>
+						<a href="catalog.html" class="categories__item-link">Полный список</a> -->
+					</li>
+					<li class="categories__list-item
+					categories__list-item--coins ">
+						<h3 class="categories__item-heading">Монеты</h3>
+						<!-- <p class="categories__item-description">Самая первая фотография сделана была в 1826 году. Называется она «Вид их окна на Ле-Грас». Ее создателем является Жозеф Нисефор Ньепс, французский изобретатель.</p>
+						<a href="catalog.html" class="categories__item-link">Полный список</a> -->
+					</li>
+					<li class="categories__list-item
+					categories__list-item--clocks">
+						<h3 class="categories__item-heading">Часы</h3>
+						<!-- <p class="categories__item-description">Самая первая фотография сделана была в 1826 году. Называется она «Вид их окна на Ле-Грас». Ее создателем является Жозеф Нисефор Ньепс, французский изобретатель.</p>
+						<a href="catalog.html" class="categories__item-link">Полный список</a> -->
+					</li>
+					<li class="categories__list-item
+					categories__list-item--silver">
+						<h3 class="categories__item-heading">Столовое серебро</h3>
+						<!-- <p class="categories__item-description">Самая первая фотография сделана была в 1826 году. Называется она «Вид их окна на Ле-Грас». Ее создателем является Жозеф Нисефор Ньепс, французский изобретатель.</p>
+						<a href="catalog.html" class="categories__item-link">Полный список</a> -->
+					</li>
+					<li class="categories__list-item
+					categories__list-item--clocks categories__list-item--last">
+						<h3 class="categories__item-heading">А также многое другое!<br>Давайте обсудим!<br>Звоните по телефону:<br>
+							<a href="tel:89052805948">8-905-280-59-48</a><br>или оставьте
+							<a href="#form">заявку</a>.</h3>
 						<!-- <p class="categories__item-description">Самая первая фотография сделана была в 1826 году. Называется она «Вид их окна на Ле-Грас». Ее создателем является Жозеф Нисефор Ньепс, французский изобретатель.</p>
 						<a href="catalog.html" class="categories__item-link">Полный список</a> -->
 					</li>
@@ -107,8 +139,9 @@
 			<form id="form" action="" method="POST">
 				<section class="owner">
                     <div class="owner__wrapper-heading">
-                        <h2 class="owner__heading">Ваши контактные данные</h2>
-                    </div>
+                        <h2 class="owner__heading">Заинтересовались? Оставьте заявку!</h2>
+					</div>
+					<p class="owner__description">Вы можете прикрепить изображение и мы сделаем оценку вашего товара.</p>
                     <ul class="owner__data-list">
                         <li class="owner__data-item">
                             <label class="owner__data-label" for="owner-email">E-mail:*</label>
@@ -127,6 +160,15 @@
                                     <use xlink:href="#icon-phone"></use>
                                 </svg>
                             </i>
+						</li>
+						<li class="owner__data-item owner__data-item--file">
+                            <label class="owner__data-label" for="owner-tel">Прикрепить изображение</label>
+                            <input id="owner-file" class="owner__file" type="file" name="ownerFile">
+                            <!-- <i class="owner__tel-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512">
+                                    <use xlink:href="#icon-phone"></use>
+                                </svg>
+                            </i> -->
                         </li>
                     </ul>
                 </section>
@@ -147,7 +189,7 @@
 			</div>
 			<div class="page-footer__wrapper">
 				<div class="page-footer__logo">
-					<a class="page-footer__logo-link" href="#page-header"><p class="page-footer__logo-img">Антиквариат XX век</p></a>
+					<a class="page-footer__logo-link" href="#page-header"><p class="page-footer__logo-img"><img src="img/vectorpaint.svg" width="100" height="100" alt="Антиквариат XX век"></p></a>
 				</div>
 				<ul class="page-footer__social-list">
 					<li class="page-footer__social-item">
