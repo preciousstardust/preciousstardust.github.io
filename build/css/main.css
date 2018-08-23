@@ -409,10 +409,10 @@ template {
     opacity: 0.3; }
 
 .page-header__contacts--tel::before {
-  background-image: url("../img/icon-phone.svg"); }
+  background-image: url("../img/icon-phone_white.svg"); }
 
 .page-header__contacts--email::before {
-  background-image: url("../img/icon-email.svg"); }
+  background-image: url("../img/icon-email_white.svg"); }
 
 @media (min-width: 768px) {
   .page-header {
@@ -1188,7 +1188,7 @@ template {
 @media (min-width: 768px) {
   .advantages {
     width: 708px;
-    padding-bottom: 50px; }
+    padding-bottom: 0px; }
   .advantages__heading {
     margin: 0;
     margin-bottom: 63px;
@@ -1199,11 +1199,11 @@ template {
   .advantages__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap; }
   .advantages__list-item {
     width: 245px;
-    min-height: 282px;
+    min-height: 250px;
     padding-left: 0;
     margin-bottom: 0;
     position: relative;
@@ -1213,8 +1213,8 @@ template {
       position: absolute;
       top: -40px;
       left: 108px;
-      font-size: 282px;
-      line-height: 282px;
+      font-size: 190px;
+      line-height: 190px;
       font-family: "Oswald", sans-serif;
       color: #EE6C4D;
       opacity: .5; }
@@ -1253,7 +1253,9 @@ template {
     padding-left: 110px;
     padding-right: 110px;
     border-bottom: none;
-    box-sizing: border-box; } }
+    box-sizing: border-box; }
+  .advantages__list-item {
+    min-height: 300px; } }
 
 .before-after {
   width: 320px;
@@ -2535,9 +2537,12 @@ template {
   .owner__email:invalid, .owner__tel:invalid, .owner__file:invalid {
     border-color: #ff8282; }
 
+.owner__email-icon svg, .owner__tel-icon svg {
+  fill: #111111; }
+
 .owner__email:focus + .owner__email-icon svg,
 .owner__tel:focus + .owner__tel-icon svg {
-  fill: #68b738; }
+  fill: #EE6C4D; }
 
 .owner__email:invalid + .owner__email-icon svg,
 .owner__tel:invalid + .owner__tel-icon svg {
@@ -2571,7 +2576,7 @@ template {
 @media (min-width: 768px) {
   .owner {
     width: 768px;
-    padding-top: 77px;
+    padding-top: 0px;
     padding-bottom: 17px; }
   .owner__wrapper-heading {
     width: 768px;
