@@ -480,7 +480,7 @@ template {
 
 @media (min-width: 768px) {
   .logo__img {
-    height: 320px;
+    height: 250px;
     width: 300px; }
   .logo__text {
     width: 400px;
@@ -591,7 +591,7 @@ template {
 	margin-left: -12px; */
   width: 24px;
   height: 2px;
-  background-color: #000;
+  background-color: #EE6C4D;
   transition: 0.2s; }
 
 .menu-button__bar::before {
@@ -893,7 +893,7 @@ template {
   min-height: 280px; }
 
 .categories__list-item--pin {
-  background-image: url("../img/bg_pin.jpg"); }
+  background-image: url("../img/sovietpin.jpg"); }
 
 .categories__list-item--porcelain {
   background-image: url("../img/bg_porcelain.jpg"); }
@@ -2551,6 +2551,9 @@ template {
   color: #222;
   cursor: pointer; }
 
+.owner__data-label--file {
+  margin-bottom: 10px; }
+
 .owner__tel-icon svg {
   position: absolute;
   width: 24px;
@@ -2890,88 +2893,41 @@ template {
     width: 490px; } }
 
 .to-top-button {
-  width: 60px;
-  height: 60px;
-  display: none;
-  /* Hidden by default */
+  color: #EE6C4D;
+  display: block;
+  /* or block */
   position: fixed;
-  /* Fixed/sticky position */
-  bottom: 20%;
-  /* Place the button at the bottom of the page */
-  right: 1.5em;
-  /* Place the button 30px from the right */
-  z-index: 99;
-  /* Make sure it does not overlap */
+  width: 45px;
+  height: 45px;
+  left: 10%;
+  bottom: 8%;
   border: none;
-  /* Remove borders */
-  outline: none;
-  /* Remove outline */
-  background-color: #EE6C4D;
-  /* Set a background color */
-  color: white;
-  /* Text color */
-  cursor: pointer;
-  /* Add a mouse pointer on hover */
-  padding: 15px;
-  /* Some padding */
-  border-radius: 50%;
-  /* Rounded corners */
-  font-size: 18px;
-  /* Increase font size */
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
-  opacity: .8; }
+  text-decoration: none;
+  transition: all .3s ease-out;
+  background-color: transparent;
+  z-index: 100; }
 
-.arrow {
-  cursor: pointer;
-  height: 120px;
-  left: 50%;
+.to-top-button:before {
+  content: '▲';
+  font-size: 2em;
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  transition: -webkit-transform .1s;
-  transition: transform .1s;
-  transition: transform .1s, -webkit-transform .1s;
-  width: 20px; }
-  .arrow-top, .arrow-bottom {
-    background-color: #666;
-    height: 4px;
-    left: -5px;
-    position: absolute;
-    top: 50%;
-    width: 100%; }
-    .arrow-top:after, .arrow-bottom:after {
-      background-color: #fff;
-      content: '';
-      height: 100%;
-      position: absolute;
-      top: 0;
-      transition: all 0.15s; }
-  .arrow-top {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    -webkit-transform-origin: bottom right;
-            transform-origin: bottom right; }
-    .arrow-top:after {
-      left: 100%;
-      right: 0;
-      transition-delay: 0s; }
-  .arrow-bottom {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    -webkit-transform-origin: top right;
-            transform-origin: top right; }
-    .arrow-bottom:after {
-      left: 0;
-      right: 100%;
-      transition-delay: 0.15s; }
-  .arrow:hover .arrow-top:after {
-    left: 0;
-    transition-delay: 0.15s; }
-  .arrow:hover .arrow-bottom:after {
-    right: 0;
-    transition-delay: 0s; }
-  .arrow:active {
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.9);
-            transform: translateX(-50%) translateY(-50%) scale(0.9); }
+  top: 0;
+  left: 50%;
+  margin-left: -.7em;
+  border: solid .13em #EE6C4D;
+  border-radius: 10em;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.3em;
+  border-color: inherit;
+  transition: -webkit-transform .5s ease-in;
+  transition: transform .5s ease-in;
+  transition: transform .5s ease-in, -webkit-transform .5s ease-in; }
+
+.to-top-button:hover {
+  color: #f84e23;
+  border-color: #f84e23; }
+
+.to-top-button:hover:before {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg); }
